@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a2e;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background: #16213e;
+    padding: 40px;
+    border-radius: 12px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    color: #e2b96f;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: #0f3460;
+    color: #aaa;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tab-btn.active {
+    background: #e2b96f;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #0f3460;
+    border: 1px solid #e2b96f44;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #e2b96f;
+    color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f0c97f;
+}
+
+.meddelande {
+    margin-top: 12px;
+    color: #e2b96f;
+    font-size: 0.9rem;
+}
