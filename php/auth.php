@@ -12,14 +12,12 @@ if ($action === 'register') {
         die(json_encode(['success' => false, 'message' => 'Fyll i alla fält']));
     }
 
-    // Kolla om användarnamnet redan finns
     $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
     $stmt->execute([$username]);
     if ($stmt->fetch()) {
         die(json_encode(['success' => false, 'message' => 'Användarnamnet är redan taget']));
     }
 
-    // Skapa användaren
     $hashed = password_hash($password, PASSWORD_DEFAULT);
     $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
     $stmt->execute([$username, $hashed]);
