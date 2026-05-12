@@ -37,9 +37,52 @@ if (isset($_SESSION['user_id'])) {
         </div>
     </div>
 
+    <script>
+        function visaFlik(flik) {
+            document.getElementById('login').style.display = flik === 'login' ? 'block' : 'none';
+            document.getElementById('register').style.display = flik === 'register' ? 'block' : 'none';
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+        }
 
+        async function logga_in() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
 
-    
+            const res = await fetch('php/auth.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                window.location.href = 'Lobby.php';
+            } else {
+                document.getElementById('login-meddelande').textContent = data.message;
+            }
+        }
+
+        async function registrera() {
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+
+            const res = await fetch('php/auth.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `action=register&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+            });
+            const data = await res.json();
+
+            document.getElementById('reg-meddelande').textContent = data.message;
+            if (data.success) {
+                setTimeout(() => visaFlik('login'), 1500);
+            }
+        }
+    </script>
+</body>
+</html
+
 
 
 
