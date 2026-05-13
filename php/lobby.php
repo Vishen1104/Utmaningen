@@ -31,7 +31,7 @@ if (!isset($_SESSION['user_id'])) { header('Location: Index.php'); exit; }
                 <h2>Öppna rum</h2>
                 <button onclick="hamta_rum()" class="btn-small">↻</button>
             </div>
-            <div id="rum-lista">Väntar på svar...</div>
+            <div id="rum-lista">Laddar sida...</div>
         </div>
     </div>
 </div>
