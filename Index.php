@@ -10,7 +10,7 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>Poker – Logga in</title>
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="Css/Style.css">
 </head>
 <body>
     <div class="auth-container">
@@ -27,7 +27,6 @@ if (isset($_SESSION['user_id'])) {
             <button onclick="logga_in()">Logga in</button>
             <p id="login-meddelande" class="meddelande"></p>
         </div>
-
 
         <div id="register" class="flik" style="display:none;">
             <input type="text" id="reg-username" placeholder="Välj användarnamn">
@@ -81,8 +80,4 @@ if (isset($_SESSION['user_id'])) {
         }
     </script>
 </body>
-</html
-
-
-
-
+</html>
