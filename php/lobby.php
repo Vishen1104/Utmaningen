@@ -59,4 +59,3 @@ function joinRoom($pdo, $room_id, $user_id) {
     $stmt = $pdo->prepare("INSERT INTO players_in_room (room_id, user_id, seat, chips) VALUES (?,?,?,?)");
     $stmt->execute([$room_id, $user_id, $seat, $chips]);
 }
-?>
