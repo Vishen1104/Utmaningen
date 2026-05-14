@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) { header('Location: Index.php'); exit; }
 <body>
 <div class="lobby-wrapper">
     <div class="lobby-header">
-        <h1>🃏 Poker</h1>
+        <h1>♠ Poker ♦</h1>
         <div class="user-info">
             <span>👤 <?= htmlspecialchars($_SESSION['username']) ?></span>
             <button onclick="logga_ut()" class="btn-small">Logga ut</button>

@@ -7,7 +7,6 @@ body {
     min-height: 100vh;
 }
 
-/* ===== LOGIN ===== */
 .auth-container {
     background: linear-gradient(145deg, #161b22, #1c2333);
     padding: 44px;
@@ -93,7 +92,31 @@ button:hover { background: linear-gradient(135deg, #f0c97f, #e2b96f); transform:
     padding-bottom: 20px;
     border-bottom: 1px solid #21262d;
 }
-.lobby-header h1 { font-size: 2rem; color: #e2b96f; letter-spacing: 1px; }
+.lobby-header h1 {
+    font-size: 2.4rem;
+    color: #e2b96f;
+    letter-spacing: 3px;
+    text-shadow: 
+        0 0 10px rgba(226,185,111,0.8),
+        0 0 20px rgba(226,185,111,0.5),
+        0 0 40px rgba(226,185,111,0.3);
+    animation: guldglow 2s ease-in-out infinite alternate;
+}
+
+@keyframes guldglow {
+    from {
+        text-shadow: 
+            0 0 10px rgba(226,185,111,0.8),
+            0 0 20px rgba(226,185,111,0.5),
+            0 0 40px rgba(226,185,111,0.3);
+    }
+    to {
+        text-shadow: 
+            0 0 20px rgba(226,185,111,1),
+            0 0 40px rgba(226,185,111,0.8),
+            0 0 80px rgba(226,185,111,0.5);
+    }
+}
 .user-info { display: flex; align-items: center; gap: 12px; color: #8b949e; }
 .btn-small {
     padding: 7px 16px;
@@ -135,7 +158,6 @@ button:hover { background: linear-gradient(135deg, #f0c97f, #e2b96f); transform:
 .badge-gron { background: rgba(46,204,113,0.15); color: #2ecc71; border: 1px solid rgba(46,204,113,0.3); }
 .tomt { color: #484f58; text-align: center; padding: 30px; }
 
-/* ===== SPEL ===== */
 .spel-wrapper { max-width: 960px; margin: 0 auto; padding: 16px; }
 .spel-topp {
     display: flex;
@@ -169,7 +191,7 @@ button:hover { background: linear-gradient(135deg, #f0c97f, #e2b96f); transform:
 .kort-rad { display: flex; gap: 8px; }
 .väntar-text { color: rgba(255,255,255,0.3); font-size: .9rem; font-style: italic; }
 
-/* ===== KORT ===== */
+
 .kort {
     width: 58px;
     height: 84px;
@@ -194,7 +216,6 @@ button:hover { background: linear-gradient(135deg, #f0c97f, #e2b96f); transform:
 .kort-val { font-size: 1.1rem; line-height: 1; }
 .kort-suit { font-size: 1.5rem; line-height: 1; }
 
-/* ===== SPELARE INFO ===== */
 .spelare-info { text-align: center; font-size: .8rem; color: rgba(255,255,255,.7); margin-bottom: 6px; }
 .motstandare-kort {
     display: flex;
@@ -236,7 +257,6 @@ button:hover { background: linear-gradient(135deg, #f0c97f, #e2b96f); transform:
 }
 @keyframes glow { from { box-shadow: 0 0 10px rgba(226,185,111,0.3); } to { box-shadow: 0 0 25px rgba(226,185,111,0.7); } }
 
-/* ===== ÅTGÄRDER ===== */
 .atgarder {
     display: flex;
     gap: 10px;
